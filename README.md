@@ -32,7 +32,11 @@ Authentification is done with a password/tripcode system using PBKDF2 hashes.
 
 **It's easy to self-host, and simple to use.** Developed with a security-first mentality.
 
+<<<<<<< HEAD
 Run ZeroChat in just a [few commands with Docker](README.md#Self hosting with Docker)!
+=======
+Run ZeroChat in just a [few commands with Docker](#self-hosting-with-docker)!
+>>>>>>> 3f9a5678d95478c673879654e1e635defd4180f1
 
 ## Running & Dependencies
 
@@ -42,13 +46,26 @@ This project requires NodeJS, unless you download one of the [releases](https://
 
 Take a look at the [releases](https://github.com/rslay/ZeroChat/releases) for executable binaries if you just want to run the chat server.
 
+<<<<<<< HEAD
 If you want to run the source NodeJS file and tweak it, you can go to [NodeJS.org](https://nodejs.org) to install NodeJS, and then follow along with the steps to self host below!
 
 ### Self hosting with docker [Any platform / OS]
+=======
+If you want to tweak the program and run the source code on Windows without docker, follow along with the [steps to self host](#self-hosting-without-docker) below!
+
+### Self hosting with Docker
+
+**Docker mini guide**
+
+- Prepare: `cp .env.example .env`
+- Run: `docker-compose --env-file .env up`
+- Stop: `docker-compose down`
+>>>>>>> 3f9a5678d95478c673879654e1e635defd4180f1
 
 Docker is an easy way of containerizing and delivering your applications quickly and easily, in an 
 convenient way. It's really simple to get started with this, with docker handling all the installation
 and other tasks.
+<<<<<<< HEAD
 
 Configure the environmental variables by renaming the `.env.example` file to `.env` with the respective 
 values. Then, run `docker-compose --env-file .env up` after getting the project and config ready.
@@ -66,8 +83,20 @@ well on your system, or it doesn't support it. Containers are resource intensive
 be able to do it, this is the perfect method to get started with the self-hosting.
 
 #### Prerequisites: Setting up `node` and `npm`
+=======
 
-Run the following to install the wonderful **[n](https://github.com/tj/n)** NodeJS version manager, and then install NodeJS v12.0.0:
+1. Configure the environmental variables by renaming the `.env.example` file to `.env`
+2. (Optionally) Edit `.env` with the custom values
+3. Run `docker-compose --env-file .env up` after getting the project and config ready
+
+`docker ps` should show you that the service is running!
+
+### Self Hosting without Docker
+>>>>>>> 3f9a5678d95478c673879654e1e635defd4180f1
+
+All you need is `node`, which comes with `npm`!
+
+**For Linux or Mac**: Run the following to install the wonderful **[n](https://github.com/tj/n)** NodeJS version manager, then install NodeJS v12.0.0:
 
 ```bash
 curl -L https://git.io/n-install | bash
@@ -75,14 +104,9 @@ n 12.0.0
 npm --version
 ```
 
-#### Installation and usage.
+**For Windows**: [Download and install NodeJS.org](https://nodejs.org) first
 
-- Clone or fork the repository, whichever suits you better.
-- Install the dependencies for the project using **`npm install`**
-- Configure the environmental variables by renaming the `.env.example` file to `.env` with the respective 
-  values for it. If the platform you're using have support for external environmental variables, for example AWS
-  or heroku or something else, Configure it there, and refrain from configuring `.env`
-- Run the server using **`npm run start`**
+#### 💻 Installation and usage
 
 Summary of the steps to be done:
 
@@ -90,11 +114,22 @@ Summary of the steps to be done:
 git clone https://github.com/rslay/ZeroChat zerochat
 cd zerochat
 npm install
-// configure the ENV variables if needed.
+cp .env.example .env 
+// Change the .env variables if needed
 npm run start
 ```
 
-## Upcoming features
+Explanation:
+
+- Download the repo to your machine: **`git clone https://github.com/rslay/ZeroChat zerochat`**
+  - Enter the new directory with **`cd zerochat`**
+- Install the dependencies for the project using **`npm install` or `yarn install`**
+- Configure the environmental variables by renaming the `.env.example` file to `.env`, e.g. for defaults: **`cp .env.example .env`**
+  - If you're using a Platform as a Service (PaaS), such as **AWS LightSail or Heroku**, configure it using the service's environment variables settings based of values in the `.env.example` file, and refrain from using the `.env` file
+- Run the server using **`npm run start`**
+
+
+## 🔮 Upcoming features
 
 Check the following places:
 - [Issue Tracker](https://github.com/rslay/ZeroChat/issues)
@@ -106,11 +141,11 @@ Check the following places:
 Contributions, issues, and feature requests are welcome. After cloning and setting up project locally, you can submit 
 a PR to this repo and it will be deployed once it's accepted.
 
-⚠️ It’s good to have descriptive commit messages, or PR titles so that other contributors can better understand your
+It’s good to have descriptive commit messages, or PR titles so that other contributors can better understand your
 commit or the PR Created. Read [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/) before 
 making the commit message.
 
-## How it works
+## 📔 How it works
 
 Here is the [article that explains how it works](https://justhack.in/stateful-http)!
 
