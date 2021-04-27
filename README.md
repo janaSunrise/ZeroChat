@@ -28,15 +28,23 @@ Authentification is done with a password/tripcode system using PBKDF2 hashes.
 
 ## Try it by visiting [chat.justhack.in](https://chat.justhack.in)
 
-<a href="https://chat.justhack.in"><img src="https://raw.githubusercontent.com/rslay/ZeroChat/master/image.png" title="Preview of chat login page" style="width: 200px;height: 150px"/></a>
+<a href="https://chat.justhack.in"><img src="https://raw.githubusercontent.com/rslay/ZeroChat/master/image2.png" title="Preview of chat login page" style="width: 200px;height: 150px"/></a>
 
 **It's easy to self-host, and simple to use.** Developed with a security-first mentality.
 
-<<<<<<< HEAD
-Run ZeroChat in just a [few commands with Docker](README.md#Self hosting with Docker)!
-=======
 Run ZeroChat in just a [few commands with Docker](#self-hosting-with-docker)!
->>>>>>> 3f9a5678d95478c673879654e1e635defd4180f1
+
+#### Username and Password? But no accounts required!
+- You can login using a handle of your choosing, and enter a "passcode" which is hashed into a unique "tripcode" for your passcode only
+- A passcode is like a password, but no accounts are needed to enter a room, everyone just proves who they are by their tripcode
+
+#### Rooms
+- Choose from a preselected list of "public" rooms that are advertised on the front page by clicking the Room textbox twice. 
+- Or, enter any name you want for your room, and you'll "tune" into it like a radio frequency.
+
+You can share a link with `/roomName` at the end of the URL to have your friends join that room.
+
+Wondering [how it's a live chat without javascript](https://justhack.in/stateful-http)?
 
 ## Running & Dependencies
 
@@ -46,53 +54,19 @@ This project requires NodeJS, unless you download one of the [releases](https://
 
 Take a look at the [releases](https://github.com/rslay/ZeroChat/releases) for executable binaries if you just want to run the chat server.
 
-<<<<<<< HEAD
-If you want to run the source NodeJS file and tweak it, you can go to [NodeJS.org](https://nodejs.org) to install NodeJS, and then follow along with the steps to self host below!
-
-### Self hosting with docker [Any platform / OS]
-=======
 If you want to tweak the program and run the source code on Windows without docker, follow along with the [steps to self host](#self-hosting-without-docker) below!
 
 ### Self hosting with Docker
 
-**Docker mini guide**
-
-- Prepare: `cp .env.example .env`
-- Run: `docker-compose --env-file .env up`
-- Stop: `docker-compose down`
->>>>>>> 3f9a5678d95478c673879654e1e635defd4180f1
-
-Docker is an easy way of containerizing and delivering your applications quickly and easily, in an 
-convenient way. It's really simple to get started with this, with docker handling all the installation
-and other tasks.
-<<<<<<< HEAD
-
-Configure the environmental variables by renaming the `.env.example` file to `.env` with the respective 
-values. Then, run `docker-compose --env-file .env up` after getting the project and config ready.
-
-**Docker mini guide:**
-
-- Running the bot: `docker-compose --env-file .env up`
-- Stopping the bot: `docker-compose down`
-- Rebuilding the bot: `docker-compose build`
-
-### Self hosting without docker
-
-This is a clean and neat way of hosting without using docker. You can follow this if docker doesn't work
-well on your system, or it doesn't support it. Containers are resource intensive, and your PC might not
-be able to do it, this is the perfect method to get started with the self-hosting.
-
-#### Prerequisites: Setting up `node` and `npm`
-=======
-
-1. Configure the environmental variables by renaming the `.env.example` file to `.env`
+1. Configure the environmental variables by doing `cp .env.example .env`
 2. (Optionally) Edit `.env` with the custom values
 3. Run `docker-compose --env-file .env up` after getting the project and config ready
 
 `docker ps` should show you that the service is running!
 
+Stop the service by running `docker-compose down`.
+
 ### Self Hosting without Docker
->>>>>>> 3f9a5678d95478c673879654e1e635defd4180f1
 
 All you need is `node`, which comes with `npm`!
 
@@ -147,7 +121,7 @@ making the commit message.
 
 ## 📔 How it works
 
-Here is the [article that explains how it works](https://justhack.in/stateful-http)!
+Here is the [article that explains how the chat is live without javascript](https://justhack.in/stateful-http)!
 
 ## Show your support
 
